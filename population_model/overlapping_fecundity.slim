@@ -35,7 +35,7 @@ initialize() {
 	defineGlobal("reproduce_time",c());
 	
 	
-	defineCfgParam("DRIVE_CONVERSION", 0.8);///germline_resistance cut rate is for homing drive and resistance rate is for TADS drive
+	defineCfgParam("DRIVE_CONVERSION", 0.9);///germline_resistance cut rate is for homing drive and resistance rate is for TADS drive
 	defineCfgParam("GERMLINE_RESISTANCE_CUT_RATE_F", 0.0); //germline_resistance cut rate is for homing drive
 	defineCfgParam("GERMLINE_RESISTANCE_CUT_RATE_M", 0.0);
 	defineCfgParam("HOMING_PHASE_CUT_RATE_F", DRIVE_CONVERSION);
@@ -48,7 +48,7 @@ initialize() {
 	else
 		defineConstant("EMBRYO_RESISTANCE_CUT_RATE_F",0.05595); //default 0.1
 	defineCfgParam("EMBRYO_RESISTANCE_CUT_RATE_M", 0.0);
-	defineCfgParam("SOMATIC_FITNESS_MULTIPLIER_F", 0.8); //for dr-wt individuals, mean the percent of fertile offsprings
+	defineCfgParam("SOMATIC_FITNESS_MULTIPLIER_F", 0.9); //for dr-wt individuals, mean the percent of fertile offsprings
 	defineCfgParam("SOMATIC_FITNESS_MULTIPLIER_M", 1.0);
 	defineCfgParam("HET_MOTHER_CAS_INHERITANCE", 1.83);   // when the mother is dr-wt and drive conversion happens, the amount of cas9 in it.
 	defineCfgParam("X_SHRED_RATE", 0.0);
@@ -880,7 +880,7 @@ early() {
 	
 	// let a RELEASE_INTERVAL of 1000 indicate that we're only releasing once
 	//	if (RELEASE_INTERVAL==1000 & this_gen > 0)
-	//		return;   //¦
+	//		return;   //ï¿½ï¿½
 	
 	if (this_gen%RELEASE_INTERVAL!= 0)
 		return; // release at the interval generations only

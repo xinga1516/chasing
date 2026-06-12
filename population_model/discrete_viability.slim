@@ -30,7 +30,7 @@ initialize() {
     else
         defineConstant("EMBRYO_RESISTANCE_CUT_RATE_F",0.05595); //default 0.1
 	defineCfgParam("EMBRYO_RESISTANCE_CUT_RATE_M", 0.0);
-	defineCfgParam("SOMATIC_FITNESS_MULTIPLIER_F", 0.95); //for dr-wt individuals, mean the percent of fertile offsprings
+	defineCfgParam("SOMATIC_FITNESS_MULTIPLIER_F", 0.9); //for dr-wt individuals, mean the percent of fertile offsprings
 	defineCfgParam("SOMATIC_FITNESS_MULTIPLIER_M", 1.0);
 	defineCfgParam("HET_MOTHER_CAS_INHERITANCE", 1.83);   // when the mother is dr-wt and drive conversion happens, the amount of cas9 in it.
 	defineCfgParam("X_SHRED_RATE", 0.0);
@@ -69,13 +69,13 @@ initialize() {
 	defineConstant("INBREEDING_FECUNDITY_PENALTY", 0.0); //from 0 - 1, always % dec.
 	defineConstant("REPRISING_BOUNDARIES", T); //toroidal if false
 	defineCfgParam("SIM_BOUND",3); // the side length of the simulation area
-	defineCfgParam("EFFECTIVE_POPULATION_DENSITY",10000);
+	defineCfgParam("EFFECTIVE_POPULATION_DENSITY",20000);
 	catn("SIM BOUND: "+asString(SIM_BOUND));
 
 	//release specifics
 	defineConstant("HETEROZYGOUS_DROP", T);
 	defineConstant("DROP_RADIUS", 0.01);
-	defineConstant("NO_DROP", T);
+	defineConstant("NO_DROP", F);
 	defineConstant("CIRCLE_DROP", T);
 	defineConstant("LEFT_EDGE_DROP", F);
 	defineConstant("UNIFORM_DROP", F);
